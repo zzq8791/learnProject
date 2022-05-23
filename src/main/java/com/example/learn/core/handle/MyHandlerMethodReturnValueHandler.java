@@ -5,11 +5,15 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class MyHandlerMethodReturnValueHandler implements HandlerMethodReturnValueHandler {
 
 	@Override
 	public boolean supportsReturnType(MethodParameter returnType) {
 		// TODO Auto-generated method stub
+		log.info("returnType：{}",returnType.getMethod());
 		return true;
 	}
 
@@ -17,10 +21,9 @@ public class MyHandlerMethodReturnValueHandler implements HandlerMethodReturnVal
 	public void handleReturnValue(Object returnValue, MethodParameter returnType, ModelAndViewContainer mavContainer,
 			NativeWebRequest webRequest) throws Exception {
 		// TODO Auto-generated method stub
-		
-		System.out.println(returnValue);
-		System.out.println(returnType);
-		System.out.println(mavContainer);
+		log.info("returnValue：{}",returnValue);
+		log.info("returnType：{}",returnType);
+		log.info("mavContainer：{}",mavContainer);
 
 	}
 

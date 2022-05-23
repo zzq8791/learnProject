@@ -15,7 +15,7 @@ public class TestController {
 
 	@RequestMapping("/test")
 	@ResponseBody
-	public String getStr(@RequestBody String str){
+	public TestParam getStr(@RequestBody TestParam str){
 		log.info("进入controller");
 		// ResponseEnum.LICENCE_NOT_FOUND.assertNotNull(null,"ccc");
 		log.info("进入controller str: {}",str);
