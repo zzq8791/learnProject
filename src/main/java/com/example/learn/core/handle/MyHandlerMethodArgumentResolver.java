@@ -2,6 +2,7 @@ package com.example.learn.core.handle;
 
 import java.util.List;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConv
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
+@Configuration
 public class MyHandlerMethodArgumentResolver implements  HandlerMethodArgumentResolver  {
 
   /*  public MyHandlerMethodArgumentResolver(List<HttpMessageConverter<?>> converters) {

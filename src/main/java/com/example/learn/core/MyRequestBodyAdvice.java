@@ -7,7 +7,6 @@ import java.lang.reflect.Type;
 import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
-import org.springframework.core.Conventions;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpInputMessage;
@@ -17,15 +16,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.learn.core.filter.ContentCachingRequestWrapper;
 import com.example.learn.core.filter.XHttpInputMessage;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
-import cn.hutool.core.bean.BeanUtil;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@ControllerAdvice
+//@ControllerAdvice
 public class MyRequestBodyAdvice extends RequestBodyAdviceAdapter {
 
 	@Override
