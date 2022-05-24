@@ -1,6 +1,7 @@
 package com.example.learn.core.handle;
 
 import org.springframework.core.MethodParameter;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.method.support.ModelAndViewContainer;
@@ -8,6 +9,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
+@Component
 public class MyHandlerMethodReturnValueHandler implements HandlerMethodReturnValueHandler {
 
 	@Override
@@ -24,7 +26,6 @@ public class MyHandlerMethodReturnValueHandler implements HandlerMethodReturnVal
 		log.info("returnValue：{}",returnValue);
 		log.info("returnType：{}",returnType);
 		log.info("mavContainer：{}",mavContainer);
-
 	}
 
 }

@@ -20,6 +20,7 @@ public class TestHandle  implements HandlerInterceptor{
 		Object obj = request.getAttribute("VV");
 		log.info("preHandle执行 obj :{} ",obj);
 		log.info("preHandle执行");
+		log.info("preHandle执行时间 ： {}",System.currentTimeMillis());
 		return true;
 	}
 
@@ -28,6 +29,7 @@ public class TestHandle  implements HandlerInterceptor{
 			@Nullable ModelAndView modelAndView) throws Exception {
 		
 		log.info("postHandle执行");
+		log.info("preHandle执行完成： {}",System.currentTimeMillis());
 	}
 	
 	@Override

@@ -16,7 +16,7 @@ import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.example.learn.core.filter.MyConvertMessage;
+import com.example.learn.core.handle.MyHandlerMethodArgumentResolver;
 import com.example.learn.core.handle.TestHandle;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -47,7 +47,7 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
 //        super.addArgumentResolvers(argumentResolvers);
 		System.err.println("addArgumentResolvers");
-        argumentResolvers.add(new MyConvertMessage(httpMessageConverters.getConverters())); 
+        argumentResolvers.add(new MyHandlerMethodArgumentResolver()); 
     }
 	
 	@Override

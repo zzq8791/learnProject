@@ -1,9 +1,10 @@
-package com.example.learn.core.filter;
+/*package com.example.learn.core.filter;
 
 import java.util.List;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -11,6 +12,7 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.ModelAndViewContainer;
 import org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver;
 
+@Component
 public class MyConvertMessage extends AbstractMessageConverterMethodArgumentResolver{
 
 
@@ -40,3 +42,4 @@ public class MyConvertMessage extends AbstractMessageConverterMethodArgumentReso
 	
 
 }
+*/
