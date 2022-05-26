@@ -19,7 +19,7 @@ public class TestHandle  implements HandlerInterceptor{
 			throws Exception {
 		Object obj = request.getAttribute("VV");
 		log.info("preHandle执行 obj :{} ",obj);
-		log.info("preHandle执行");
+		log.info("preHandle执行",request.getHeaderNames());
 		log.info("preHandle执行时间 ： {}",System.currentTimeMillis());
 		return true;
 	}

@@ -8,6 +8,8 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor;
 
+import com.example.learn.core.anno.CurrentUser;
+
 import java.util.List;
 
 @Slf4j
@@ -19,10 +21,13 @@ public class MyRequestResponseBodyMethodProcessor extends RequestResponseBodyMet
 
 	@Override
 	public boolean supportsParameter(MethodParameter parameter) {
-		log.info("MyRequestResponseBodyMethodProcessor supportsParameter parameter: {}", parameter);
-		log.info("parameter.getAnnotatedElement(): {}", parameter.getAnnotatedElement());
+		log.info("getParameterType: {}", parameter.getParameterType());
+		//log.info("parameter.getAnnotatedElement(): {}", parameter.getAnnotatedElement());
 		log.info("parameter.getParameter(): {}", parameter.getParameter());
 		log.info("parameter.hasParameterAnnotation(RequestBody.class): {}", parameter.hasParameterAnnotation(RequestBody.class));
-		return parameter.hasParameterAnnotation(RequestBody.class);
+		boolean resflag = parameter.hasParameterAnnotation(RequestBody.class);
+		boolean currentflag = parameter.hasParameterAnnotation(CurrentUser.class);
+		log.info("flag): {}",resflag);
+		return resflag;
 	}
 }

@@ -9,9 +9,13 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Component
+//@Component
 public class MyHandlerMethodReturnValueHandler implements HandlerMethodReturnValueHandler {
 
+	public MyHandlerMethodReturnValueHandler(){
+		
+	}
+	
 	@Override
 	public boolean supportsReturnType(MethodParameter returnType) {
 		// TODO Auto-generated method stub

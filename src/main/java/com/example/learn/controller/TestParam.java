@@ -5,7 +5,7 @@ import java.io.Serializable;
 import lombok.Data;
 
 @Data
-public class TestParam  implements Serializable{
+public class TestParam {
 
 	/**
 	 * 

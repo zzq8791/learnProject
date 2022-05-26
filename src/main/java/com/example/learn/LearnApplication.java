@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 import com.example.learn.core.InitializingAdvice;
 
+
 @ComponentScan("com.example.learn.*")
 @SpringBootApplication
 public class LearnApplication {
@@ -15,9 +16,9 @@ public class LearnApplication {
 		SpringApplication.run(LearnApplication.class, args);
 	}
 
-	/*@Bean
-    public InitializingAdvice getResponseBodyWrap() {
-        return new InitializingAdvice();
-    }*/
+//	@Bean
+//    public InitializingAdvice getResponseBodyWrap() {
+//        return new InitializingAdvice();
+//    }
 	
 }
